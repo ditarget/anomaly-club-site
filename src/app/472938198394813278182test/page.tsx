@@ -1,31 +1,22 @@
 'use client'
 
+'use client'
+
 import { useState } from 'react'
-import { createPortal } from 'react-dom'
 
 export default function TestPage() {
-	const [isOpen, setIsOpen] = useState(false)
+	const [text, setText] = useState('CLOSED')
 
 	return (
-		<div className='h-200 flex items-center justify-center'>
-			<button onClick={() => setIsOpen(true)}>Открыть</button>
+		<div className='h-screen flex items-center justify-center flex-col gap-4'>
+			<div className='text-2xl font-bold'>{text}</div>
 
-			{isOpen &&
-				createPortal(
-					<div className='fixed inset-0 z-[9999] flex items-center justify-center bg-black/50'>
-						<div className='relative bg-card p-6 rounded-xl'>
-							<button
-								onClick={() => setIsOpen(false)}
-								className='absolute top-2 right-2'
-							>
-								✕
-							</button>
-
-							<h2>Тестовая модалка</h2>
-						</div>
-					</div>,
-					document.body
-				)}
+			<button
+				onClick={() => setText('OPEN')}
+				className='px-4 py-2 bg-black text-white'
+			>
+				TEST
+			</button>
 		</div>
 	)
 }
