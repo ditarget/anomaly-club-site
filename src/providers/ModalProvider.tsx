@@ -23,7 +23,7 @@ export function ModalProvider({ children }: { children: React.ReactNode }) {
 			{children}
 
 			{/* MODAL */}
-			{isOpen && <PaymentModal closeModal={closeModal} />}
+			{isOpen && <div></div>}
 		</ModalContext.Provider>
 	)
 }

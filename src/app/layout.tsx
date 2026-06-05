@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 
+import { ModalProvider } from '@/src/providers/ModalProvider'
 import { geometria, songer } from '@/src/styles/fonts'
 
 import './globals.css'
@@ -20,7 +21,13 @@ export default function RootLayout({
 			lang='ru'
 			className={`${geometria.variable} ${songer.variable} h-full antialiased`}
 		>
-			<body className='min-h-full flex flex-col'>{children}</body>
+			<body className='min-h-full flex flex-col'>
+				<ModalProvider>
+					
+					{children}
+					
+				</ModalProvider>
+			</body>
 		</html>
 	)
 }
