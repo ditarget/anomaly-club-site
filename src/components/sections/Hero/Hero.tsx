@@ -2,11 +2,13 @@
 
 import { clsx } from 'clsx'
 
+import { Section } from '../../ui/base/Section'
+
 import { H1 } from '@/src/components/ui/base/Heading'
 import { Logo } from '@/src/components/ui/base/Logo'
 import { useModal } from '@/src/hooks/useModal'
 import { text } from '@/src/styles/text'
-import { Section } from '../../ui/base/Section'
+import { cn } from '@/src/utils/cn'
 
 export function Hero() {
 	const { openModal } = useModal()
@@ -36,8 +38,9 @@ export function Hero() {
 				<div className='mt-auto'>
 					<div className='bg-card/84 max-w-110 w-full mb-5 p-6 border border-border rounded-[10px] backdrop-blur-[66px]'>
 						<p className={clsx(text.body, 'mb-4 lg:mb-5')}>
-							Получите доступ к&nbsp;сообществу предпринимателей, где&nbsp;рост создаётся через&nbsp;сильное
-							окружение, работу в&nbsp;мини-группах и&nbsp;прикладные обучения
+							Получите доступ к&nbsp;сообществу предпринимателей, где&nbsp;рост
+							создаётся через&nbsp;сильное окружение, работу в&nbsp;мини-группах
+							и&nbsp;прикладные обучения
 						</p>
 
 						<div className='block lg:hidden'>
@@ -49,6 +52,7 @@ export function Hero() {
 						</div>
 
 						<button
+							type='button'
 							className={clsx(
 								'relative bg-gradient-button .bg-gradient-button:hover w-full h-12 xs:h-14 rounded-[60px] text-[#071638] pl-5 pr-1.5 py-1.5',
 								text.buttonText
@@ -67,10 +71,19 @@ export function Hero() {
 								</div>
 							</div>
 
-							<div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 w-[90%] h-[80%] rounded-[60px] bg-gradient-button blur-md'></div>
+							{/* glow layer */}
+							<div
+								className={cn(
+									'absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2w-[90%]h-[105%]',
+									'rounded-[60px] bg-gradient-button',
+									'opacity-40 blur-md pointer-events-none'
+								)}
+							/>
 						</button>
 
-						<p className={clsx(text.caption, 'mt-4 font-medium')}>Всего за 5 000 ₽ в месяц</p>
+						<p className={clsx(text.caption, 'mt-4 font-medium')}>
+							Всего за 5 000 ₽ в месяц
+						</p>
 					</div>
 				</div>
 			</Section>
@@ -82,8 +95,12 @@ function FeaturesList() {
 	return (
 		<>
 			<div className={clsx(text.body, 'font-bold')}>75+ городов</div>
-			<div className={clsx(text.body, 'font-bold')}>200+ обучающих программ</div>
-			<div className={clsx(text.body, 'font-bold')}>Разборы с Михаилом Гребенюком</div>
+			<div className={clsx(text.body, 'font-bold')}>
+				200+ обучающих программ
+			</div>
+			<div className={clsx(text.body, 'font-bold')}>
+				Разборы с Михаилом Гребенюком
+			</div>
 		</>
 	)
 }

@@ -18,7 +18,7 @@ export function PaymentModal({ closeModal }: { closeModal: () => void }) {
 				<div className='relative z-10 flex justify-end p-4'>
 					<button
 						onClick={closeModal}
-						className='text-3xl text-[#757575]'
+						className='text-3xl text-[#757575] cursor-pointer'
 					>
 						✕
 					</button>

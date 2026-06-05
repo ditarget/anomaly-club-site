@@ -21,16 +21,15 @@ export function Button({
 	size = 'medium',
 	type = 'button',
 	addStyle,
-	onClick,
-	
+	onClick
 }: ButtonProps) {
 	return (
 		<button
 			type={type}
 			onClick={onClick}
 			className={cn(
-				'bg-gradient-button .bg-gradient-button:hover',
 				'relative',
+				'bg-gradient-button',
 				buttonSizes[size],
 				'pl-5 pr-5 py-1.5',
 				'rounded-[60px]',
@@ -39,10 +38,18 @@ export function Button({
 				addStyle
 			)}
 		>
-			<div className='flex justify-center items-center h-full w-full'>
+			<div className='flex justify-center items-center h-full w-full relative z-10'>
 				<span className='pt-0.5'>{children}</span>
-				<div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 w-[90%] h-[80%] rounded-[60px] bg-gradient-button blur-md'></div>
 			</div>
+
+			{/* glow layer */}
+			<div
+				className={cn(
+					'absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2w-[90%]h-[105%]',
+					'rounded-[60px] bg-gradient-button',
+					'opacity-40 blur-md pointer-events-none'
+				)}
+			/>
 		</button>
 	)
 }
