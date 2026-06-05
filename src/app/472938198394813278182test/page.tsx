@@ -7,10 +7,8 @@ export default function TestPage() {
 	const [isOpen, setIsOpen] = useState(false)
 
 	return (
-		<div className='h-200'>
-			<button onClick={() => setIsOpen(true)}>
-				Открыть
-			</button>
+		<div className='h-200 flex items-center justify-center'>
+			<button onClick={() => setIsOpen(true)}>Открыть</button>
 
 			{isOpen &&
 				createPortal(
