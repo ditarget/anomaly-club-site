@@ -5,7 +5,8 @@ import { cn } from '@/src/utils/cn'
 
 export function PaymentModal({ closeModal }: { closeModal: () => void }) {
 	return (
-		<div className='fixed inset-0 z-120 flex items-center justify-center'>
+
+		<div className='fixed inset-0 z-120 block'>
 			{/* overlay */}
 			<div className='absolute inset-0 bg-black/60' />
 
