@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+:root {
+  /* базовые цвета */
+  --background: #02071A;
+  --foreground: #FFFFFF;
+  --card-description: #AEB2C4;
+  --border: #3A3E4E;
+
+  /* акцент */
+  --highlight: #93F1FF;
+
+  /* карточки */
+  --card: #13182A;
+
+  /* градиенты кнопок */
+  --gradient-button: linear-gradient(
+    90deg,
+    #3798C8 0%,
+    #73D7F1 30%,
+    #8EEDFB 47%,
+    #58C1E7 63%,
+    #0179C8 100%
+  );
+
+  /* градиент карточек */
+  --gradient-card-highlight: linear-gradient(
+    90deg,
+    #286FC4 0%,
+    #13182A 100%
+  );
+
+    --gradient-card-cta: linear-gradient(
+    180deg,
+    #13182A 0%,
+    #0F2346 74%,
+    #0A3069 100%
+  );
+
+  /* градиент списка (вертикальный) */
+  --gradient-list: linear-gradient(
+    180deg,
+    #FFFFFF 0%,
+    #8CEDFB 100%
+  );
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+  --color-highlight: var(--highlight);
+  --color-card: var(--card);
+  --color-card-description: var(--card-description);
+
+  --font-sans: var(--font-geometria);
+  --font-display: var(--font-songer);
+
+   --breakpoint-xs: 480px;
+}
+
+iframe .kin-pl-1u1x5f3-MainPlayButton {
+  background-color: #02071A!important;
+}
+
+/* utilities для градиентов */
+@layer utilities {
+  .bg-gradient-button {
+    background-image: var(--gradient-button);
+    background-size: 100% 100%;
+    transition: all 0.3s ease;
+  }
+
+  .bg-gradient-button:hover {
+    background-size: 170% 150%;
+  }
+
+  .bg-gradient-card-highlight {
+    background-image: var(--gradient-card-highlight);
+  }
+
+   .bg-gradient-card-cta {
+    background-image: var(--gradient-card-cta);
+  }
+
+  .bg-gradient-list {
+    background-image: var(--gradient-list);
+  }
+
+  .scrollbar-hide {
+		-ms-overflow-style: none; /* IE и Edge */
+		scrollbar-width: none; /* Firefox */
+	}
+
+	.scrollbar-hide::-webkit-scrollbar {
+		display: none; /* Chrome, Safari */
+	}
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #02071A inset!important;
+  -webkit-text-fill-color: white!important;
+}
