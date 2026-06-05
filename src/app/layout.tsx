@@ -1,8 +1,5 @@
 import type { Metadata } from 'next'
 
-import { Footer } from '@/src/components/layout/Footer'
-import { Header } from '@/src/components/layout/Header'
-import { ModalProvider } from '@/src/providers/ModalProvider'
 import { geometria, songer } from '@/src/styles/fonts'
 
 import './globals.css'
