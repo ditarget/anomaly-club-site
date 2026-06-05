@@ -1,0 +1,39 @@
+services:
+  anomaly-club-site:
+    build: .
+    container_name: anomaly-club-site
+    restart: unless-stopped
+    env_file:
+      - .env
+    labels:
+      # Включаем Traefik для этого сервиса
+      - "traefik.enable=true"
+
+      # Правило маршрутизации по домену
+      - "traefik.http.routers.form-nextjs.rule=Host(`${HOST}`)"
+      - "traefik.http.routers.form-nextjs.entrypoints=https"
+      - "traefik.http.routers.form-nextjs.tls=true"
+      - "traefik.http.routers.form-nextjs.tls.certresolver=le"
+
+      # Назначаем порт сервиса
+      - "traefik.http.services.form-nextjs.loadbalancer.server.port=3000"
+
+      # Middleware: безопасные заголовки
+      - "traefik.http.middlewares.form-secure.headers.SSLRedirect=true"
+      - "traefik.http.middlewares.form-secure.headers.STSSeconds=315360000"
+      - "traefik.http.middlewares.form-secure.headers.browserXSSFilter=true"
+      - "traefik.http.middlewares.form-secure.headers.contentTypeNosniff=true"
+      - "traefik.http.middlewares.form-secure.headers.forceSTSHeader=true"
+      - "traefik.http.middlewares.form-secure.headers.SSLHost=${HOST}"
+      - "traefik.http.middlewares.form-secure.headers.STSIncludeSubdomains=true"
+      - "traefik.http.middlewares.form-secure.headers.STSPreload=true"
+      - "traefik.http.middlewares.form-secure.headers.customFrameOptionsValue=SAMEORIGIN"
+      - "traefik.http.middlewares.form-secure.headers.referrerPolicy=strict-origin-when-cross-origin"
+      - "traefik.http.middlewares.form-secure.headers.contentSecurityPolicy=default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' ${API_URL}"
+      # Привязываем middleware к роутеру
+      - "traefik.http.routers.form-nextjs.middlewares=form-secure"
+
+networks:
+  default:
+    name: traefik_network
+    external: true
