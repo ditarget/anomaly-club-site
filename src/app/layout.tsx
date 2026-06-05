@@ -25,7 +25,7 @@ export default function RootLayout({
 		>
 			<body className='min-h-full flex flex-col'>
 				<ModalProvider>
-					<Header />
+
 					{children}
 					<Footer />
 				</ModalProvider>
