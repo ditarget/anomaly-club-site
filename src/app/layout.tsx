@@ -23,13 +23,7 @@ export default function RootLayout({
 			lang='ru'
 			className={`${geometria.variable} ${songer.variable} h-full antialiased`}
 		>
-			<body className='min-h-full flex flex-col'>
-				<ModalProvider>
-
-					{children}
-					<Footer />
-				</ModalProvider>
-			</body>
+			<body className='min-h-full flex flex-col'>{children}</body>
 		</html>
 	)
 }
