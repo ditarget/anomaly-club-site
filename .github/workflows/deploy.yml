@@ -22,5 +22,5 @@ jobs:
             cd /home/${{ secrets.SSH_USER }}/anomaly-club-site
             git pull origin main
             docker compose down
-            docker image prune -a -f
-            docker compose up -d --build
+            docker compose build --no-cache
+            docker compose up -d
