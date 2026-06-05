@@ -54,12 +54,13 @@ export function Hero() {
 						<button
 							type='button'
 							className={clsx(
-								'relative bg-gradient-button .bg-gradient-button:hover w-full h-12 xs:h-14 rounded-[60px] text-[#071638] pl-5 pr-1.5 py-1.5',
+								'relative bg-gradient-button bg-gradient-button:hover w-full h-12 xs:h-14 rounded-[60px] text-[#071638] pl-5 pr-1.5 py-1.5 overflow-hidden',
 								text.buttonText
 							)}
 							onClick={openModal}
 						>
-							<div className='flex justify-between items-center h-full'>
+							{/* CONTENT — ВАЖНО z-10 */}
+							<div className='flex justify-between items-center h-full relative z-10'>
 								<p className='pt-0.5'>Получить доступ</p>
 
 								<div className='bg-[#071638] aspect-square h-full flex items-center rounded-[60px]'>
@@ -74,20 +75,13 @@ export function Hero() {
 							{/* glow layer */}
 							<div
 								className={cn(
-									'absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2w-[90%] h-[105%]',
+									'absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2',
+									'w-[90%] h-[105%]',
 									'rounded-[60px] bg-gradient-button',
-									'opacity-40 blur-md pointer-events-none'
+									'opacity-40 blur-md pointer-events-none',
+									'z-0'
 								)}
 							/>
-						</button>
-
-						<button
-							type='button'
-							onPointerDown={() => alert('pointer')}
-							onClick={() => alert('click')}
-							className='my-4'
-						>
-							Тестирую кое-что
 						</button>
 
 						<p className={clsx(text.caption, 'mt-4 font-medium')}>

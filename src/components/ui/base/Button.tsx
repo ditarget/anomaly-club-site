@@ -45,7 +45,7 @@ export function Button({
 			{/* glow layer */}
 			<div
 				className={cn(
-					'absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2w-[90%] h-[105%]',
+					'absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[105%]',
 					'rounded-[60px] bg-gradient-button',
 					'opacity-40 blur-md pointer-events-none'
 				)}
