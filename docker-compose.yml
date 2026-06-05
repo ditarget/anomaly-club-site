@@ -29,8 +29,7 @@ services:
       - "traefik.http.middlewares.form-secure.headers.STSPreload=true"
       - "traefik.http.middlewares.form-secure.headers.customFrameOptionsValue=SAMEORIGIN"
       - "traefik.http.middlewares.form-secure.headers.referrerPolicy=strict-origin-when-cross-origin"
-      - "traefik.http.middlewares.form-secure.headers.contentSecurityPolicy=default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' ${API_URL}"
-      # Привязываем middleware к роутеру
+      - "traefik.http.middlewares.form-secure.headers.contentSecurityPolicy=default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' ${API_URL}; frame-src 'self' https://kinescope.io"
       - "traefik.http.routers.form-nextjs.middlewares=form-secure"
 
 networks:
