@@ -59,7 +59,7 @@ export function Hero() {
 							)}
 							onClick={openModal}
 						>
-							{/* CONTENT — ВАЖНО z-10 */}
+							
 							<div className='flex justify-between items-center h-full relative z-10'>
 								<p className='pt-0.5'>Получить доступ</p>
 

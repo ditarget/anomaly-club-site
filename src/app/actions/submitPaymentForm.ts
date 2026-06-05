@@ -65,8 +65,6 @@ export async function submitPaymentForm(
 		phone = '7' + phone
 	}
 
-	phone = `+${phone}`
-
 	const apiUrl = process.env.API_URL
 
 	try {
