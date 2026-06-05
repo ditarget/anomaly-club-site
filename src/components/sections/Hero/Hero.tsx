@@ -57,7 +57,10 @@ export function Hero() {
 								'relative bg-gradient-button .bg-gradient-button:hover w-full h-12 xs:h-14 rounded-[60px] text-[#071638] pl-5 pr-1.5 py-1.5',
 								text.buttonText
 							)}
-							onClick={openModal}
+							onClick={() => {
+								console.log('CLICK WORKS')
+								alert('Teстирование')
+							}}
 						>
 							<div className='flex justify-between items-center h-full'>
 								<p className='pt-0.5'>Получить доступ</p>
