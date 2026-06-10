@@ -38,7 +38,7 @@ export function Video() {
 				<div
 					className={cn(
 						'absolute inset-0',
-						'bg-[url("/background/noise-2.png")]',
+						'bg-[url("/background/noise-3.png")]',
 						'bg-repeat',
 						'opacity-100',
 						'pointer-events-none'
