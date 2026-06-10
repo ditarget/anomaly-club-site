@@ -47,7 +47,7 @@ export function CTA() {
 			</div>
 
 			{/* КОНТЕНТ */}
-			<Section addStyle='relative z-10 items-center text-center py-17.5 sm:py-20 overflow-visible'>
+			<Section addStyle='relative z-10 items-center text-center pb-17.5 sm:pb-20 pt-2.5 overflow-visible'>
 				<div className='max-w-600 w-full mx-auto'>
 					<H2 addStyle='w-full md:text-[80px]'>
 						Аномалия вашего&nbsp;бизнеса <br />
@@ -57,11 +57,12 @@ export function CTA() {
 					<Button
 						addStyle='mt-7.5 xs:mt-10'
 						onClick={openModal}
+                        size='large'
 					>
 						Оформить подписку
 					</Button>
 
-					<p className={cn(text.body, 'font-medium mt-2.5 mt-5')}>
+					<p className={cn(text.body, 'font-medium mt-2.5 xs:mt-5')}>
 						Всего за&nbsp;5 000&nbsp;₽ в&nbsp;месяц
 					</p>
 				</div>

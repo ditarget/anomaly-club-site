@@ -46,7 +46,7 @@ export function Video() {
 				/>
 			</div>
 
-			<Section addStyle='md:flex-row gap-0 md:gap-5 py-17.5 sm:py-20'>
+			<Section addStyle='md:flex-row gap-0 md:gap-5 pt-17.5 sm:pt-20'>
 				<div className='flex-1 w-full order-1 md:order-2 flex flex-col items-center text-center md:items-start md:text-left'>
 					<H2>Посмотрите видео</H2>
 

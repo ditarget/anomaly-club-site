@@ -1,5 +1,7 @@
-export default function ThankYouPage(){
+import { ThankYouPage } from "@/src/components/pages/thank-you-page";
+
+export default function ThankYou(){
     return (
-        <div className="min-h-dvh flex items-center justify-center">Страница спасибо в разработке</div>
+        <ThankYouPage></ThankYouPage>
     )
 }
