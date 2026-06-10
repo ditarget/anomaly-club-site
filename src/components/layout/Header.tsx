@@ -17,7 +17,7 @@ export function Header() {
       fixed top-0 left-0 right-0 z-100'
 		>
 			<div className='w-full flex justify-between items-center'>
-				<div className='w-18 xs:w-33 h-auto p-2 bg-background rounded-md'>
+				<div className='w-18 xs:w-33 h-auto py-2 pl-1.25 pr-2 bg-background rounded-md'>
 					<a href='/'>
 						<Logo />
 					</a>

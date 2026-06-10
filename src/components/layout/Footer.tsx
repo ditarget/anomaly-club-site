@@ -10,19 +10,36 @@ export function Footer() {
 			<footer className='py-4 pt-14 pb-19 max-w-400 w-full h-auto mx-auto px-5 md:px-10 flex flex-col sm:flex-row justify-between gap-8 sm:gap-5'>
 				<div className='flex flex-col lg:flex-row max-w-185 w-full gap-8 lg:gap-5'>
 					<div className='container'>
-						<div className='w-43 container'>
-							<Logo></Logo>
-						</div>
+						<a
+							href='/'
+							className='block w-43'
+						>
+							<Logo />
+						</a>
 					</div>
 
 					<div className='space-y-4 container'>
-						<p className={clsx(text.body, 'font-medium uppercase underline')}>Оферта</p>
-						<p className={clsx(text.body, 'font-medium uppercase underline')}>
+						<a
+							href='https://anomalya.ru/anomaly_oferta'
+							className={clsx(text.body, 'font-medium uppercase underline')}
+						>
+							Оферта
+						</a>
+						<a
+							href='https://anomalya.ru/anomaly_privacy_policy'
+							className={clsx(text.body, 'font-medium uppercase underline')}
+						>
 							Политика конфиденциальности
-						</p>
-						<p className={clsx(text.body, 'font-medium uppercase underline max-w-65 w-full')}>
+						</a>
+						<a
+							href='https://anomalya.ru/app-rules'
+							className={clsx(
+								text.body,
+								'font-medium uppercase underline max-w-65 w-full'
+							)}
+						>
 							Правила использования приложения «Аномалия»
-						</p>
+						</a>
 					</div>
 				</div>
 

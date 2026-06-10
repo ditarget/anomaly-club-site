@@ -17,10 +17,11 @@ export function Hero() {
 		<div
 			className="
 				mx-auto
-				max-w-600 w-full h-[90vh]
+				max-w-500 w-full h-200 sm:h-[90vh]
 				bg-[url('/background/anomaly-main-img.webp')]
 				bg-cover
-				bg-center"
+				bg-position-[calc(50%+20px)_center] sm:bg-center
+				rounded-b-[10px]"
 		>
 			<Section>
 				<H1>Аномалия - сообщество для предпринимателей</H1>
@@ -85,7 +86,7 @@ export function Hero() {
 						</button>
 
 						<p className={clsx(text.caption, 'mt-4 font-medium')}>
-							Всего за 5 000 ₽ в месяц
+							Всего за&nbsp;5 000&nbsp;₽ в&nbsp;месяц
 						</p>
 					</div>
 				</div>

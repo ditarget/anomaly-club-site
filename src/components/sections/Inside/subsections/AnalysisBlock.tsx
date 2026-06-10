@@ -2,7 +2,7 @@
 
 import { CardBase } from '../cards/CardBase'
 import { CardCTA } from '../cards/CardCTA'
-import { CardCase } from '../cards/CardCase'
+
 import { CardHighlight } from '../cards/CardHighlight'
 
 import { useHorizontalScroll } from '@/src/hooks/useHorizontalScroll'

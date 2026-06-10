@@ -2,7 +2,6 @@
 
 import { CardBase } from '../cards/CardBase'
 import { CardCTA } from '../cards/CardCTA'
-import { CardCase } from '../cards/CardCase'
 import { CardHighlight } from '../cards/CardHighlight'
 
 import { useHorizontalScroll } from '@/src/hooks/useHorizontalScroll'
@@ -51,12 +50,12 @@ export function EventsBlock() {
 						title='Что дает офлайн'
 						descriptionTSX={
 							<>
-								<p className={cn(text.body, 'max-w-100 mb-2 xs:mb-2.5')}>
+								<p className={cn(text.body, 'text-card-description max-w-100 mb-2 xs:mb-2.5')}>
 									Офлайн быстрее превращает знакомства в партнёрства, клиентов,
 									подрядчиков и новые идеи для бизнеса.
 								</p>
 
-								<p className={cn(text.body, 'max-w-100')}>
+								<p className={cn(text.body, 'text-card-description max-w-100')}>
 									Иногда один разговор с нужным человеком даёт больше,
 									чем месяцы попыток решить всё самому.
 								</p>
@@ -69,12 +68,12 @@ export function EventsBlock() {
 						title='Доступ к&nbsp;сильным предпринимателям региона'
 						descriptionTSX={
 							<>
-								<p className={cn(text.body, 'max-w-100 mb-2 xs:mb-2.5')}>
+								<p className={cn(text.body, 'text-card-description max-w-100 mb-2 xs:mb-2.5')}>
 									В&nbsp;Аномалии проходят встречи с&nbsp;основателями
 									и&nbsp;руководителями крупных компаний региона.
 								</p>
 
-								<p className={cn(text.body, 'max-w-100')}>
+								<p className={cn(text.body, 'text-card-description max-w-100')}>
 									Можно не&nbsp;просто послушать чужой опыт, а&nbsp;задать свой
 									вопрос и&nbsp;увидеть, как&nbsp;опытные предприниматели решают
 									похожие задачи.
