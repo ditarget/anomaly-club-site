@@ -17,7 +17,7 @@ export function Hero() {
 		<div
 			className="
 				mx-auto
-				max-w-500 w-full h-150 sm:h-[90vh]
+				max-w-500 w-full h-175 sm:h-[90vh]
 				bg-[url('/background/anomaly-main-img.webp')]
 				bg-cover
 				bg-position-[calc(50%+20px)_center] sm:bg-center

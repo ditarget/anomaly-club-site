@@ -32,7 +32,7 @@ export function Footer() {
 							Политика конфиденциальности
 						</a>
 						<a
-							href='https://anomalya.ru/app-rules'
+							href='https://anomalya.ru/anomaly_app_rules'
 							className={clsx(
 								text.body,
 								'block font-medium uppercase underline max-w-65 w-full'
