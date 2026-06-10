@@ -42,7 +42,7 @@ export function CardHighlight({
 
 			<div
 				className={cn(
-					'w-full h-32 xs:h-50 sm:h-60',
+					'w-full h-38 xs:h-50 sm:h-60',
 					'mt-3.75 xs:mt-5',
 					imgUrl,
 					'bg-cover bg-center',
