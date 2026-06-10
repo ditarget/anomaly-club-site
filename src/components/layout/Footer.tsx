@@ -21,13 +21,13 @@ export function Footer() {
 					<div className='space-y-4 container'>
 						<a
 							href='https://anomalya.ru/anomaly_oferta'
-							className={clsx(text.body, 'font-medium uppercase underline')}
+							className={clsx(text.body, 'block font-medium uppercase underline')}
 						>
 							Оферта
 						</a>
 						<a
 							href='https://anomalya.ru/anomaly_privacy_policy'
-							className={clsx(text.body, 'font-medium uppercase underline')}
+							className={clsx(text.body, 'block font-medium uppercase underline')}
 						>
 							Политика конфиденциальности
 						</a>
@@ -35,7 +35,7 @@ export function Footer() {
 							href='https://anomalya.ru/app-rules'
 							className={clsx(
 								text.body,
-								'font-medium uppercase underline max-w-65 w-full'
+								'block font-medium uppercase underline max-w-65 w-full'
 							)}
 						>
 							Правила использования приложения «Аномалия»
