@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import type { ControllerRenderProps, FieldValues } from 'react-hook-form'
 import { useFormContext } from 'react-hook-form'
 
@@ -30,7 +29,7 @@ export function Agreements() {
 
 		return (
 			<label className='flex items-start gap-2 cursor-pointer'>
-				<div className='relative w-4 h-4'>
+				<div className='relative w-4 h-4 shrink-0'>
 					<input
 						type='checkbox'
 						onChange={e => onChange(e.target.checked)}
@@ -43,12 +42,10 @@ export function Agreements() {
 					/>
 
 					{!!value && (
-						<Image
+						<img
 							src='/check.svg'
-							alt='check'
-							className='absolute top-0 left-0 w-4 h-4 pointer-events-none'
-							width={16}
-							height={16}
+							alt=''
+							className='absolute inset-0 z-10 w-4 h-4 pointer-events-none'
 						/>
 					)}
 				</div>
