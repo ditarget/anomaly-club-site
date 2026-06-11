@@ -18,7 +18,7 @@ export function Hero() {
 			className="
 				mx-auto
 				max-w-500 w-full h-175 sm:h-[90vh]
-				bg-[url('/background/anomaly-main-img.webp')]
+				bg-[url('/background/anomaly-img-main.webp')]
 				bg-cover
 				bg-position-[calc(50%+20px)_center] sm:bg-center
 				rounded-b-[10px]"
@@ -60,7 +60,6 @@ export function Hero() {
 							)}
 							onClick={openModal}
 						>
-							
 							<div className='flex justify-between items-center h-full relative z-10'>
 								<p className='pt-0.5'>Получить доступ</p>
 

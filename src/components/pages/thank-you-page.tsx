@@ -9,12 +9,7 @@ export function ThankYouPage() {
 	return (
 		<div className='relative w-full overflow-visible'>
 			{/* СЦЕНА */}
-			<div
-				className={cn(
-					'absolute bottom-0 w-full aspect-[640/360] sm:aspect-[1800/896] -z-20'
-				)}
-			>
-				{/* ФОН */}
+			<div className='absolute bottom-0 w-full aspect-[640/360] sm:aspect-[1800/896] -z-20'>
 				<picture>
 					<source
 						media='(min-width: 640px)'
@@ -30,45 +25,37 @@ export function ThankYouPage() {
 					/>
 				</picture>
 
-				{/* ШУМ */}
-				<div
-					className={cn(
-						'absolute inset-0',
-						'bg-[url("/background/noise-3.png")]',
-						'bg-repeat',
-						'opacity-100',
-						'pointer-events-none'
-					)}
-				/>
+				<div className='absolute inset-0 bg-[url("/background/noise-3.png")] bg-repeat pointer-events-none' />
 			</div>
 
 			{/* КОНТЕНТ */}
-			<Section addStyle='relative z-10 items-center text-center py-30 sm:py-40 overflow-visible'>
-				<div className='max-w-600 w-full mx-auto'>
+			<Section addStyle='relative z-10 py-30 sm:py-40'>
+				<div className='max-w-600 w-full mx-auto flex flex-col items-center text-center'>
 					<H2 addStyle='w-full md:text-[80px]'>
 						Добро пожаловать в&nbsp;Аномалию
 					</H2>
 
-					<p className={cn(text.bodyLarge, 'mt-2.5 xs:mt-5 mb-7.5 xs:mb-10')}>
+					<p className={cn(text.bodyLarge, 'mt-5 mb-10')}>
 						Доступ к&nbsp;Аномалии уже&nbsp;открыт. <br />
 						Осталось&nbsp;перейти в&nbsp;Телеграм-канал и&nbsp;скачать
 						приложение
 					</p>
 
-					<div className='text-foreground w-full flex flex-col lg:flex-row gap-2.5 lg:gap-5 justify-center mb-7.5 xs:mb-16'>
+					{/* BUTTONS */}
+					<div className='flex flex-col lg:flex-row gap-5 mb-16 w-full items-center justify-center'>
 						<a
 							href='https://t.me/anomaly_grebenuk_bot?start=payment_site'
 							target='_blank'
 							rel='noopener noreferrer'
 							className={cn(
-								'flex items-center justify-center w-full max-w-87.5 h-16 mx-auto lg:mx-0 rounded-[60px]',
+								'flex items-center justify-center w-full max-w-87.5 h-16 rounded-[60px]',
 								'bg-linear-to-b from-[#35ADE1] to-[#1F95D3]',
 								'border border-border',
 								text.buttonText,
 								'text-[13px]'
 							)}
 						>
-							<span className='pt-0.5'>Перейти в&nbsp;Телеграм канал</span>
+							<span className='pt-0.5'>Перейти в Телеграм канал</span>
 						</a>
 
 						<a
@@ -76,11 +63,9 @@ export function ThankYouPage() {
 							target='_blank'
 							rel='noopener noreferrer'
 							className={cn(
-								'flex items-center justify-center',
-								'w-full max-w-87.5 h-16 mx-auto lg:mx-0 ',
-								'rounded-[60px] border border-border',
+								'flex items-center justify-center w-full max-w-87.5 h-16 rounded-[60px]',
 								'bg-linear-to-b from-[#000000] to-[#123C89]',
-								'text-foreground',
+								'border border-border',
 								text.buttonText,
 								'text-[13px]'
 							)}
@@ -89,9 +74,10 @@ export function ThankYouPage() {
 						</a>
 					</div>
 
+					{/* CARD */}
 					<div
 						className={cn(
-							'bg-card space-y-2.5 xs:space-y-3.75 w-fit mx-auto p-5 sm:p-7.5 border border-border rounded-[10px]',
+							'bg-card space-y-3 w-fit mx-auto p-5 sm:p-7.5 border border-border rounded-[10px]',
 							text.bodyLarge
 						)}
 					>
@@ -106,8 +92,9 @@ export function ThankYouPage() {
 								href='https://t.me/anomaly_sz_bot'
 								target='_blank'
 								rel='noopener noreferrer'
+								className='underline'
 							>
-								<u>Службу Заботы</u>
+								Службу Заботы
 							</a>
 						</p>
 					</div>
