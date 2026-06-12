@@ -9,7 +9,7 @@ interface CardHighlightProps {
 	description?: string
 	descriptionTSX?: React.ReactNode
 	imgUrl: string
-	border?: boolean
+	hasBorder?: boolean
 }
 
 export function CardHighlight({
@@ -18,12 +18,12 @@ export function CardHighlight({
 	description,
 	descriptionTSX,
 	imgUrl,
-	border = true
+	hasBorder = true
 }: CardHighlightProps) {
 	return (
 		<CardWrapper
 			bg='bg-gradient-card-highlight'
-			border={border}
+			hasBorder={hasBorder}
 		>
 			<div>
 				<div className='flex items-start gap-1.25 sm:gap-2 mb-2 xs:mb-2.5'>
@@ -46,7 +46,7 @@ export function CardHighlight({
 					'mt-3.75 xs:mt-5',
 					imgUrl,
 					'bg-cover bg-center',
-					border ? 'border border-border rounded-[10px]' : ''
+					hasBorder ? 'border border-border rounded-[10px]' : ''
 				)}
 			></div>
 		</CardWrapper>

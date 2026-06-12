@@ -7,7 +7,7 @@ interface CardBaseProps {
 	description?: string
 	descriptionTSX?: React.ReactNode
 	imgUrl: string
-	border?: boolean
+	hasBorder?: boolean
 }
 
 export function CardBase({
@@ -15,10 +15,10 @@ export function CardBase({
 	description,
 	descriptionTSX,
 	imgUrl,
-	border = true
+	hasBorder = true
 }: CardBaseProps) {
 	return (
-		<CardWrapper border={border}>
+		<CardWrapper hasBorder={hasBorder}>
 			<div>
 				<p className={cn(text.cardTitle, 'mb-2 xs:mb-2.5')}>{title}</p>
 
@@ -37,7 +37,7 @@ export function CardBase({
 					'mt-3.75 xs:mt-5',
 					imgUrl,
 					'bg-cover bg-center',
-					border ? 'border border-border rounded-[10px]' : ''
+					hasBorder ? 'border border-border rounded-[10px]' : ''
 				)}
 			></div>
 		</CardWrapper>

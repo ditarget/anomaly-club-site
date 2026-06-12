@@ -55,7 +55,7 @@ export function Footer() {
 					<p className={clsx(text.body, 'font-medium container')}>
 						<a href='tel:+74951369596'>+7 (495) 136-95-96</a>
 						<br />
-						09559, Москва, Новороссийская 27
+						109559, Москва, Новороссийская 27
 						<br />
 						Время работы: 10:00–19:00
 					</p>

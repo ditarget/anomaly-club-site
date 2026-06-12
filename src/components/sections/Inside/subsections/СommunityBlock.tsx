@@ -30,21 +30,21 @@ export function CommunityBlock() {
                         }
                         description='В приложении Аномалии есть раздел «Связи»&nbsp;– там&nbsp;можно находить предпринимателей под&nbsp;свои цели, нишу и&nbsp;город.'
                         imgUrl='bg-[url("/images/community/anomaly-img-16.png")] h-40 xs:h-60 sm:h-70'
-                        border={false}
+                        hasBorder={false}
                     ></CardHighlight>
 
                     <CardBase
                         title='Как работает поиск'
                         description='Заполняете профиль, а&nbsp;приложение показывает людей с&nbsp;точками пересечения по&nbsp;задачам и&nbsp;возможной пользе.'
                         imgUrl='bg-[url("/images/community/anomaly-img-17.png")] h-52 xs:h-72 sm:h-82'
-                        border={false}
+                        hasBorder={false}
                     ></CardBase>
 
                     <CardBase
                         title='Кейс: новый проект за&nbsp;4&nbsp;дня'
                         description='Виктория Спектор и&nbsp;Никита Константинов познакомились через «Связи» и&nbsp;начали проект на&nbsp;13&nbsp;млн.'
                         imgUrl='bg-[url("/images/community/anomaly-img-18.png")] h-52 xs:h-72 sm:h-82'
-                        border={false}
+                        hasBorder={false}
                     ></CardBase>
 
                     <CardCTA

@@ -95,6 +95,32 @@ iframe .kin-pl-1u1x5f3-MainPlayButton {
 	.scrollbar-hide::-webkit-scrollbar {
 		display: none; /* Chrome, Safari */
 	}
+
+  /* ====== Firefox ====== */
+.scrollbar-new {
+	scrollbar-width: thin;
+	scrollbar-color: rgba(120, 120, 120, 0.35) transparent;
+}
+
+/* ====== Chrome / Edge / Safari ====== */
+.scrollbar-new::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+.scrollbar-new::-webkit-scrollbar-track {
+	background: transparent; /* убираем фон */
+}
+
+.scrollbar-new::-webkit-scrollbar-thumb {
+	background: rgba(120, 120, 120, 0.35);
+	border-radius: 999px;
+	transition: background 0.2s ease;
+}
+
+.scrollbar-new::-webkit-scrollbar-thumb:hover {
+	background: rgba(120, 120, 120, 0.6);
+}
 }
 
 body {
@@ -133,4 +159,30 @@ input:-webkit-autofill {
 
 .animate-fadeIn {
 	animation: fadeIn 400ms ease-out forwards;
+}
+
+/* ====== Firefox ====== */
+.scrollbar-new {
+	scrollbar-width: thin;
+	scrollbar-color: rgba(120, 120, 120, 0.35) transparent;
+}
+
+/* ====== Chrome / Edge / Safari ====== */
+.scrollbar-new::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+.scrollbar-new::-webkit-scrollbar-track {
+	background: transparent; /* убираем фон */
+}
+
+.scrollbar-new::-webkit-scrollbar-thumb {
+	background: rgba(120, 120, 120, 0.35);
+	border-radius: 999px;
+	transition: background 0.2s ease;
+}
+
+.scrollbar-new::-webkit-scrollbar-thumb:hover {
+	background: rgba(120, 120, 120, 0.6);
 }
