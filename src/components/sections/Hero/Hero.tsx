@@ -46,10 +46,10 @@ export function Hero() {
 				<div
 					className="
 						absolute inset-0 z-0
-						bg-[url('/background/anomaly-img-main.webp')]
+						sm:bg-[url('/background/anomaly-img-main.webp')]
 						bg-cover
 						bg-position-[calc(50%+20px)_center]
-						sm:bg-center
+						sm:bg-center bg-background
 					"
 				/>
 			)}
