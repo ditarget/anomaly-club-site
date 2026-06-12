@@ -13,7 +13,7 @@ export function H2({ children, addStyle }: HeadingProps) {
 	return (
 		<h2
 			className={cn(
-				'font-display text-[36px] sm:text-[55px] tracking-[-0.02em] leading-[1.1]',
+				'font-display text-[36px] sm:text-[55px] xl:text-[66px] tracking-[-0.02em] leading-[1.1]',
 				addStyle
 			)}
 		>
