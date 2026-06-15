@@ -15,7 +15,7 @@ export function Video() {
 			{/* СЦЕНА */}
 			<div
 				className={cn(
-					'absolute top-0 w-full aspect-[1800/1399] -z-20'
+					'absolute top-0 w-full aspect-1800/1399 -z-20'
 				)}
 			>
 				{/* ФОН */}

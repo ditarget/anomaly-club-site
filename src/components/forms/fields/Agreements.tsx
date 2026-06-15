@@ -69,18 +69,14 @@ export function Agreements() {
 						<>
 							Я ознакомлен и&nbsp;соглашаюсь с&nbsp;условиями{' '}
 							<a
-								href='https://anomalya.ru/anomaly_privacy_policy'
-								target='_blank'
-								rel='noopener noreferrer'
+								href='/documents/privacy-policy'
 								className='text-blue-400 font-medium'
 							>
 								Политики конфиденциальности
 							</a>{' '}
 							и даю{' '}
 							<a
-								href='https://anomalya.ru/anomaly_reklama'
-								target='_blank'
-								rel='noopener noreferrer'
+								href='/documents/reklama'
 								className='text-blue-400 font-medium'
 							>
 								Согласие на&nbsp;получение рекламной рассылки
@@ -100,9 +96,7 @@ export function Agreements() {
 						<>
 							Я ознакомлен и&nbsp;соглашаюсь с&nbsp;условиями{' '}
 							<a
-								href='https://anomalya.ru/anomaly_oferta'
-								target='_blank'
-								rel='noopener noreferrer'
+								href='/documents/oferta'
 								className='text-blue-400 font-medium'
 							>
 								Оферты

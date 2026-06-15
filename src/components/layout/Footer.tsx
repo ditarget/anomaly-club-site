@@ -20,19 +20,19 @@ export function Footer() {
 
 					<div className='space-y-4 container'>
 						<a
-							href='https://anomalya.ru/anomaly_oferta'
+							href='/documents/oferta'
 							className={clsx(text.body, 'block font-medium uppercase underline')}
 						>
 							Оферта
 						</a>
 						<a
-							href='https://anomalya.ru/anomaly_privacy_policy'
+							href='/documents/privacy-policy'
 							className={clsx(text.body, 'block font-medium uppercase underline')}
 						>
 							Политика конфиденциальности
 						</a>
 						<a
-							href='https://anomalya.ru/anomaly_app_rules'
+							href='/documents/app-rules'
 							className={clsx(
 								text.body,
 								'block font-medium uppercase underline max-w-65 w-full'

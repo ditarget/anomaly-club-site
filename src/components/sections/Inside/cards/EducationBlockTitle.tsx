@@ -6,10 +6,10 @@ import { H3 } from '@/ui/base/Heading'
 export function EducationBlockTitle() {
 	return (
 		
-			<div className='flex text-left gap-2.5 xs:gap-5'>
+			<div className='flex flex-col lg:flex-row text-left lg:gap-2.5 gap-2'>
 				<div
 					className={cn(
-						'flex flex-col justify-end shrink-0 w-75 xs:w-100 sm:w-123.75 px-5 sm:px-7.5'
+						'flex flex-col justify-end lg:shrink-0 w-full max-w-75 xs:max-w-100 sm:max-w-123.75 px-5 sm:px-7.5'
 					)}
 				>
 					<div className='flex items-center gap-1.25 sm:gap-2 mb-2 xs:mb-2.5'>
@@ -27,7 +27,7 @@ export function EducationBlockTitle() {
 
 				<div
 					className={cn(
-						'flex flex-col justify-end shrink-0 w-75 xs:w-100 sm:w-123.75 px-5 sm:px-7.5'
+						'flex flex-col justify-end max-w-75 xs:max-w-100 sm:max-w-123.75 px-5 sm:px-7.5'
 					)}
 				>
 					<p className={cn(text.body, 'text-card-description')}>

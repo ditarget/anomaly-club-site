@@ -18,15 +18,15 @@ export function EducationBlock() {
 
 	return (
 		<>
-			<div className='w-full h-10 sm:h-12.5'></div>
+			<div className='w-full mx-auto max-w-400 px-5 lg:px-10 mt-10 sm:mt-12.5'>
+				<EducationBlockTitle />
+			</div>
 
 			<div
 				ref={scrollRef}
 				className='overflow-x-auto overflow-y-hidden scrollbar-hide cursor-grab'
 			>
 				<div className='mx-auto max-w-400 px-5 lg:px-10'>
-					<EducationBlockTitle />
-
 					<div className='flex text-left gap-2.5 xs:gap-5 mt-5 sm:mt-7.5'>
 						<CardEducation
 							badge='Продажи и маркетинг'
@@ -88,7 +88,10 @@ export function EducationBlock() {
 			</div>
 
 			{selectedEducation && (
-				<EducationDetailsModal selectedEducation={selectedEducation} closeModal={() => setSelectedEducation(null)} />
+				<EducationDetailsModal
+					selectedEducation={selectedEducation}
+					closeModal={() => setSelectedEducation(null)}
+				/>
 			)}
 		</>
 	)

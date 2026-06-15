@@ -9,7 +9,7 @@ export function ThankYouPage() {
 	return (
 		<div className='relative w-full overflow-visible'>
 			{/* СЦЕНА */}
-			<div className='absolute bottom-0 w-full aspect-[640/360] sm:aspect-[1800/896] -z-20'>
+			<div className='absolute bottom-0 w-full aspect-640/360 sm:aspect-1800/896 -z-20'>
 				<picture>
 					<source
 						media='(min-width: 640px)'
