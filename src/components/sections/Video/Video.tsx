@@ -13,11 +13,7 @@ export function Video() {
 	return (
 		<div className='relative w-full overflow-visible'>
 			{/* СЦЕНА */}
-			<div
-				className={cn(
-					'absolute top-0 w-full aspect-1800/1399 -z-20'
-				)}
-			>
+			<div className={cn('absolute top-0 w-full aspect-1800/1399 -z-20')}>
 				{/* ФОН */}
 				<picture>
 					<source
@@ -77,9 +73,8 @@ export function Video() {
 							}}
 						>
 							<iframe
-								src='https://kinescope.io/embed/tH6cpxTpxaNf5cWKtwKinM'
+								src='https://kinescope.io/embed/b597Tw8N7ncbG9c2bcpbQ3'
 								allow='autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;'
-								frameBorder={0}
 								allowFullScreen
 								style={{
 									position: 'absolute',

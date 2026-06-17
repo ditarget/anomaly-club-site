@@ -36,11 +36,11 @@ export function Hero() {
 			{isMobile ? (
 				<div className='absolute inset-0 z-0'>
 					<iframe
-						src='https://kinescope.io/embed/pjszKhL8uKuKBaVKK74NWJ'
+						src='https://kinescope.io/embed/q8iRLeMsRkZnWxLphnVAEZ'
 						allow='autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;'
 						allowFullScreen
 						className='absolute top-1/2 left-1/2 min-w-full min-h-full -translate-x-1/2 -translate-y-1/2'
-					/>
+					></iframe>
 				</div>
 			) : (
 				<div
