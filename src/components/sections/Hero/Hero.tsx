@@ -1,7 +1,6 @@
 'use client'
 
 import { clsx } from 'clsx'
-import { useEffect, useState } from 'react'
 
 import { Section } from '../../ui/base/Section'
 
@@ -14,48 +13,16 @@ import { cn } from '@/src/utils/cn'
 export function Hero() {
 	const { openModal } = useModal()
 
-	const [isMobile, setIsMobile] = useState(false)
-
-	useEffect(() => {
-		const checkIsMobile = () => {
-			setIsMobile(window.innerWidth < 640)
-		}
-
-		checkIsMobile()
-
-		window.addEventListener('resize', checkIsMobile)
-
-		return () => {
-			window.removeEventListener('resize', checkIsMobile)
-		}
-	}, [])
-
 	return (
 		<div className='relative mx-auto max-w-500 w-full h-175 sm:h-[90vh] overflow-hidden rounded-b-[10px]'>
-			{/* Background */}
-			{isMobile ? (
-				<div className='absolute inset-0 z-0'>
-					<iframe
-						src='https://kinescope.io/embed/q8iRLeMsRkZnWxLphnVAEZ'
-						allow='autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;'
-						allowFullScreen
-						className='absolute top-1/2 left-1/2 min-w-full min-h-full -translate-x-1/2 -translate-y-1/2'
-					></iframe>
-				</div>
-			) : (
-				<div
-					className="
+			<div
+				className="
 						absolute inset-0 z-0
-						sm:bg-[url('/background/anomaly-img-main.webp')]
+						bg-[url('/background/anomaly-img-main.webp')]
 						bg-cover
-						bg-position-[calc(50%+20px)_center]
-						sm:bg-center bg-background
+						bg-position-[calc(50%+16px)_bottom] xs:bg-position-[calc(50%+20px)_center]
 					"
-				/>
-			)}
-
-			{/* затемнение поверх фона */}
-			<div className='absolute inset-0 z-10 bg-black/20' />
+			/>
 
 			{/* Content */}
 			<div className='relative z-20 h-full'>
