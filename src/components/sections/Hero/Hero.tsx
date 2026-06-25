@@ -15,14 +15,18 @@ export function Hero() {
 
 	return (
 		<div className='relative mx-auto max-w-500 w-full h-175 sm:h-[90vh] overflow-hidden rounded-b-[10px]'>
-			<div
-				className="
-						absolute inset-0 z-0
-						bg-[url('/background/anomaly-img-main.webp')]
-						bg-cover
-						bg-position-[calc(50%+16px)_bottom] xs:bg-position-[calc(50%+20px)_center]
-					"
-			/>
+			<picture>
+				<source
+					media='(min-width: 730px)'
+					srcSet='/background/anomaly-img-main.webp'
+				/>
+
+				<img
+					src='/background/img-mobile.webp'
+					alt=''
+					className='absolute inset-0 z-0 h-full w-full object-[calc(50%+1px)_60%] xs:object-[calc(50%+20px)_center] object-cover'
+				/>
+			</picture>
 
 			{/* Content */}
 			<div className='relative z-20 h-full'>
