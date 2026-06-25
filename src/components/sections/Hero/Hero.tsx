@@ -15,7 +15,7 @@ export function Hero() {
 
 	return (
 		<div className='relative mx-auto max-w-500 w-full h-175 sm:h-[90vh] overflow-hidden rounded-b-[10px]'>
-			<picture>
+			 <picture>
 				<source
 					media='(min-width: 730px)'
 					srcSet='/background/anomaly-img-main.webp'
