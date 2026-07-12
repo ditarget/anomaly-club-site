@@ -1,35 +1,41 @@
 # === Этап 1: сборка ===
-FROM node:24-alpine AS builder
+FROM node:24.18.0-alpine AS builder
 
 WORKDIR /app
 
-# Устанавливаем ВСЕ зависимости (включая dev)
+# Устанавливаем зависимости (включая dev)
 COPY package*.json ./
 RUN npm ci
 
-# Копируем исходники и собираем
+# Копируем исходники
 COPY . .
+
+# Production build
 RUN npm run build
 
-# === Этап 2: финальный образ ===
-FROM node:24-alpine AS runner
 
-RUN addgroup -g 1001 -S nodejs && \
-    adduser -S nextjs -u 1001
+# === Этап 2: финальный образ ===
+FROM node:24.18.0-alpine AS runner
 
 WORKDIR /app
 
-# Копируем только production-зависимости
-COPY package*.json ./
-RUN npm ci --only=production --omit=dev
+ENV NODE_ENV=production
 
-# Копируем сборку
-COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
+# Создаём непривилегированного пользователя
+RUN addgroup -g 1001 -S nodejs && \
+    adduser -S nextjs -u 1001
+
+# Копируем standalone runtime
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+
+# Копируем статические файлы Next
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+
+# Копируем public
 COPY --from=builder --chown=nextjs:nodejs /app/public ./public
 
-RUN chown -R nextjs:nodejs /app
 USER nextjs
 
-CMD ["npm", "run", "start"]
-
 EXPOSE 3000
+
+CMD ["node", "server.js"]
